@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+ 
 
 {% block content %}
 
@@ -6,12 +7,12 @@
 {% load custom_filter %}
 
 <!---Carousel-->
-<div class="mt-2">
+<div class="mt-0.5">
     <div id="carouselExampleControls" class="carousel slide mx-auto" data-ride="carousel">
         <div class="carousel-inner">
             {% for slider in sliders %}
             <div class="carousel-item {% if forloop.first %} active {% endif %}">
-                <img class="d-block w-100" src="{{slider.sliderImage.url}}" alt="">
+                <img class="d-block  w-100" style="height: 520px;" src="{{slider.sliderImage.url}}" alt="">
             </div>
             {% endfor %}
         </div>

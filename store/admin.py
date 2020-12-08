@@ -1,4 +1,5 @@
 from django.contrib import admin
+from django.contrib.auth.models import Group
 from .models.products import Product
 from .models.category import Category
 from .models.customer import Customer
@@ -13,6 +14,7 @@ class AdminCategory(admin.ModelAdmin):
 
 
 # Register your models here.
+admin.site.site_header = 'PeriwinkleRose'
 admin.site.register(Product, AdminProduct)
 admin.site.register(Category, AdminCategory)
 admin.site.register(Customer)
