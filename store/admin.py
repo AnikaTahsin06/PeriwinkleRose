@@ -7,7 +7,7 @@ from .models.orders import Order
 from .models.slider import Slider
 
 class AdminProduct(admin.ModelAdmin):
-    list_display = ['name', 'price', 'category']
+    list_display = ['name', 'price', 'category','description']
 
 class AdminCategory(admin.ModelAdmin):
     list_display = ['name']

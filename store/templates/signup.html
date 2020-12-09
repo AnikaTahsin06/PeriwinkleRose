@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
 
@@ -19,7 +20,7 @@
 
                 <!---FirstName--->
                 <div class="form-group">
-                    <label for="">First Name</label>
+                    <label class="label" for="">First Name</label>
                     <input type="text" name="firstname" id="" value="{{values.first_name}}" class="form-control form-control-sm">
                 </div>
                 <!---LastName--->

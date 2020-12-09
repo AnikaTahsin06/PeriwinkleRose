@@ -1,6 +1,7 @@
 .clr{
     text-align: center;
 }
+ 
 
 /*   footer   */
 .footer
@@ -35,7 +36,7 @@
 }
 .fa-heart-o
 {
-    color: red;
+    color: rgb(209, 92, 92);
     font-size: 15px;
 }
 .footer hr
@@ -53,4 +54,16 @@
     font-size: 15px;
 }
 
+
+.fa-shopping-basket
+{
+    margin-right: -2px;
+}
  
+
+#bg{
+    background-repeat: no-repeat;
+    background-size: 1800px 900px;
+    background-position: top;
+    background-attachment: fixed;
+}

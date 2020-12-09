@@ -10,19 +10,53 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
+
 
     <title>PeriwinkleRose</title>
 </head>
 
-<body>
+<body id="bg" style="background-image: url('{% static "img/pp4.jpg" %}');">
     <!-- Navbar -->
     <div>
-        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:rgb(61, 37, 54);">
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgba(255, 221, 233, 0.972);">
+            <img src="{% static 'img/periwink1.png' %}" width="70" height="70">
+            <a class="navbar-brand" href="/about">ABOUT</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            SUPPORT
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Tips</a>
+                            <a class="dropdown-item" href="#">Shipping Policy</a>
+                            <a class="dropdown-item" href="#">Selling Policy</a>
+                            <a class="dropdown-item" href="#">Privacy Policy</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-1" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:  rgb(61, 37, 54);">
             <a class="navbar-brand" href="/">
                 <h4>
-                    <img src="{% static 'img/periwinkle.png' %}" width="70" height="70">
-                    <br>
                     PeriwinkleRose
                 </h4>
             </a>
@@ -35,9 +69,6 @@
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
                         <a class="nav-link" href="#">
-                            <br>
-                            <br>
-                            <br>
                             <h6>OUR STORES</h6><span class="sr-only">(current)</span>
                         </a>
                     </li>
@@ -47,6 +78,7 @@
                 <ul class="navbar-nav my-2 my-lg-0">
                     <li class="nav-item">
                         <a class="nav-link" href="/cart">
+                            <i class="fa fa-shopping-basket"></i>
                             <b>Cart</b>
                             <span class="badge"
                                 style="background-color: rgb(156, 48, 84);">{{request.session.cart.keys|length}}</span>
@@ -80,75 +112,46 @@
 
             </div>
         </nav>
-        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgba(248, 196, 214, 0.938);">
-            <a class="navbar-brand" href="/about">ABOUT</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            SUPPORT
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Tips</a>
-                            <a class="dropdown-item" href="#">Shipping Policy</a>
-                            <a class="dropdown-item" href="#">Selling Policy</a>
-                            <a class="dropdown-item" href="#">Privacy Policy</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                        </div>
-                    </li>
-
-                </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-1" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form>
-            </div>
-        </nav>
+         
     </div>
 
     {% block content %}
     {% endblock %}
 
-        <div class="container">
-            <div class="hg">
-                <br>
-                <h1 class="clr">Online Shopping for Women at PeriwinleRose</h1>
-                <br>
-            </div>
-            <div>
-                <p class="para">PeriwinleRose - Stores is a trusted online destination for impeccable fashion solution.
-                    When you wish to have something trendy and classy, this online shopping store could pamper your
-                    shopping needs with impeccable options. A beautiful world of natural fabrics, elegant block prints
-                    and charming designs. Ladies' wear, kid's wear, men's wear, accessories and home furnishings -- at
-                    Kessa, each bear a distinctive style. Every piece is of natural fabric & colors and is chosen with
-                    great care and passion.</p>
-                <br>
-                <p>Kessa describes as adorableness - a true inspiration, a brand all about passion for crafts and
-                    tradition from all across India. From hand-block of deserts of Kutch called Ajrakh to the weaves of
-                    Andhra called 'Ikat', not leaving behind silks of Banaras and yes of course the very famous art
-                    Sanganer print of Jaipur. We at Kessa aim to bring you high quality clothing at affordable prices.
-                    We are creating a contemporary Indian way of living, dressing and beholding for the world.</p>
-                <br>
-                <p>The beauty and authenticity of the label rests in the textile process, where material pass through
-                    the hands of one craftsman to the other, carrying forward the Indian tradition of hand made
-                    craftsmanship and, in the process, creating pieces that have unique story to share. Every craft,
-                    every product has many urban legends and tales depicting their origin. Every product that we make
-                    with love and passion has a message for you. Come and be a part of this modern day tale as we take
-                    it forward with your love and support. You can carry this message and spread it to others; this
-                    message may mean many things to many people but to us this message is simple and clear...
-                </p>
-                <br>
-                <p>"The label brings together Indian elements and global sensibility."</p>
-            </div>
+    <div class="container">
+        <div class="hg">
+            <br>
+            <hr>
+            <h1 class="clr">Online Shopping for Women at PeriwinleRose</h1>
+            <hr>
+            <br>
         </div>
+        <div>
+            <p class="para">PeriwinleRose - Stores is a trusted online destination for impeccable fashion solution.
+                When you wish to have something trendy and classy, this online shopping store could pamper your
+                shopping needs with impeccable options. A beautiful world of natural fabrics, elegant block prints
+                and charming designs. Ladies' wear, kid's wear, men's wear, accessories and home furnishings -- at
+                Kessa, each bear a distinctive style. Every piece is of natural fabric & colors and is chosen with
+                great care and passion.</p>
+            <br>
+            <p>Kessa describes as adorableness - a true inspiration, a brand all about passion for crafts and
+                tradition from all across India. From hand-block of deserts of Kutch called Ajrakh to the weaves of
+                Andhra called 'Ikat', not leaving behind silks of Banaras and yes of course the very famous art
+                Sanganer print of Jaipur. We at Kessa aim to bring you high quality clothing at affordable prices.
+                We are creating a contemporary Indian way of living, dressing and beholding for the world.</p>
+            <br>
+            <p>The beauty and authenticity of the label rests in the textile process, where material pass through
+                the hands of one craftsman to the other, carrying forward the Indian tradition of hand made
+                craftsmanship and, in the process, creating pieces that have unique story to share. Every craft,
+                every product has many urban legends and tales depicting their origin. Every product that we make
+                with love and passion has a message for you. Come and be a part of this modern day tale as we take
+                it forward with your love and support. You can carry this message and spread it to others; this
+                message may mean many things to many people but to us this message is simple and clear...
+            </p>
+            <br>
+            <p>"The label brings together Indian elements and global sensibility."</p>
+        </div>
+    </div>
     <section class="footer">
         <div class="container tex-center">
             <div class="row">
@@ -175,11 +178,13 @@
                 </div>
                 <div class="col-md-3 footer-image">
                     <h1>Download App</h1>
-                    <img src="{% static 'img/app-store-google-play1.png' %}">
+                    <a href="https://play.google.com/store/apps">
+                        <img src="{% static 'img/app-store-google-play1.png' %}">
+                    </a>
                 </div>
             </div>
             <hr>
-            <p class="copyright">Made with <i class="fa fa-heart-o"></i> by Self Practice</p>
+            <p class="copyright">Copyright 2020-Anika Tahsin <i class="fa fa-heart-o"></i> All Right Reserved</p>
         </div>
     </section>
 
