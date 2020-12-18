@@ -23,42 +23,19 @@
     <div>
         <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgba(255, 221, 233, 0.972);">
             <img src="{% static 'img/periwink1.png' %}" width="70" height="70">
-            <a class="navbar-brand" href="/about">ABOUT</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            SUPPORT
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Tips</a>
-                            <a class="dropdown-item" href="#">Shipping Policy</a>
-                            <a class="dropdown-item" href="#">Selling Policy</a>
-                            <a class="dropdown-item" href="#">Privacy Policy</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                        </div>
-                    </li>
-
-                </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-1" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form>
-            </div>
+            <a class="navbar-brand" href="/"><h2> PeriwinkleRose</h2></a>
+            <button id="bttn" onclick="slide()"></button>
         </nav>
+        <div class="search hide">
+             <div class="container">
+                <input type="text" placeholder="Search Products"><button>Search</button>
+             </div>
+        </div>
         <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:  rgb(61, 37, 54);">
-            <a class="navbar-brand" href="/">
-                <h4>
-                    PeriwinkleRose
-                </h4>
+            <a class="navbar-brand" href="/about">
+                <h6>
+                   ABOUT
+                </h6>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -73,6 +50,26 @@
                         </a>
                     </li>
                 </ul>
+                
+            <div  class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            SUPPORT
+                        </a>
+                        <div class="dropdown-menu" style="background-color:rgb(255, 235, 238);" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Tips</a>
+                            <a class="dropdown-item" href="#">Shipping Policy</a>
+                            <a class="dropdown-item" href="#">Selling Policy</a>
+                            <a class="dropdown-item" href="#">Privacy Policy</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
 
                 {{customer}}
                 <ul class="navbar-nav my-2 my-lg-0">
@@ -111,6 +108,7 @@
                 </ul>
 
             </div>
+            
         </nav>
          
     </div>
@@ -187,6 +185,8 @@
             <p class="copyright">Copyright 2020-Anika Tahsin <i class="fa fa-heart-o"></i> All Right Reserved</p>
         </div>
     </section>
+
+    <script src="{% static 'js/search.js' %}"></script>
 
 
 
