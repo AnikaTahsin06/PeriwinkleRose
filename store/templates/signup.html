@@ -5,14 +5,14 @@
 
 <div class="container">
     <div class="p-3 m-3">
-        <div class="col-lg-5 mx-auto border rounded pt-4">
-            <h3 class="alert alert-light border rounded">Create An Account</h3>
+        <div class="col-lg-5 mx-auto brc rounded pt-4">
+            <h3 class="alert  alert-light  border rounded" style="font-style:italic; text-align:center; color:rgb(119, 81, 108);">Create An Account</h3>
             <form action="/signup" method="POST">
 
                 {% csrf_token %}
 
                 {% if error %}
-                <div class="alert alert-danger" role="alert">
+                <div class="alert alert-danger" style=" color:rgba(240, 91, 86, 0.972)" role="alert">
                     {{error}}
                 </div>
                 {% endif %}
