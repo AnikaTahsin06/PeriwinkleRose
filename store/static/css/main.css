@@ -67,39 +67,16 @@
 
 /*  PRODUCT CATEGORIES  */
 .con{
-    padding: 50px;
+    padding: 30px;
 }
 .lines{
     width: 100%;
     height: 45px;
-    position: relative;
-}
-.lines::after, .lines::before{
-    content: '';
-    position: absolute;
-    margin: auto;
-    height: 2px;
-    background:  rgb(61, 37, 54);
-    width: 45%;
-    top: 45%;
-}
-.lines::after{
-    left: -50px;
-}
-.lines::before{
-    right: -50px;
-}
-.circle{
     text-align: center;
-    height: 50px;
-    width: 200px;
-    border: 2px solid  rgb(61, 37, 54);
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
+    position: relative;
+    color:rgb(102, 70, 92);
 }
+ 
  
 
 /*   footer   */
@@ -170,9 +147,13 @@
 
 /*  signuplogin  */
 .brc{
+    margin-top: 50px;
     border: 1.5px solid rgb(202, 132, 155);
     background-color: rgb(202, 132, 155);
      
 }
+
+/*  cart  */
+ 
 
  
