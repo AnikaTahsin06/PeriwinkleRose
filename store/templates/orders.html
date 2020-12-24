@@ -1,12 +1,16 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
 {% load cart %}
 {% load custom_filter %}
 
 <div class="container">
-    <div class="border rounded p-4 m-4">
-        <h1 class="display-3 pl-2 ml-2">Your Orders</h1>
+    <div class="brd rounded p-4 m-4">
+        <div class="container hdupper" style="text-align: center;">
+            <img class="img-fluid w-25 rounded-circle img-thumbnail" src="{% static 'img/credit.jpg' %}">
+        </div>
+        <h1 class="display-3 pl-2 ml-2 hding">Your Orders</h1>
         <br>
         <table class="table text-center">
             <thead class="table">
@@ -39,9 +43,9 @@
                 </tr>
                 {% endfor %}
             </tbody>
-             
+
         </table>
-        
+
     </div>
 </div>
 

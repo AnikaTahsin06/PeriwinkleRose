@@ -1,3 +1,7 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 /*   nav logo    */
 #peri{
     font-family: 'Pacifico', cursive;
@@ -64,6 +68,14 @@
 .clr{
     text-align: center;
 }
+
+/*    ourstore  */
+#map{
+    padding-bottom: 50px;
+    height: 500px;
+    width: 80%;
+}
+
 
 /*  PRODUCT CATEGORIES  */
 .con{
@@ -150,10 +162,26 @@
     margin-top: 50px;
     border: 1.5px solid rgb(202, 132, 155);
     background-color: rgb(202, 132, 155);
+    box-shadow: 0px 5px 15px rgba(241, 138, 202, 0.9);
      
 }
 
-/*  cart  */
+/*  cart&order  */
+.brd{
+    position: relative;
+    margin-top: 50px;
+    padding-top: 5px;
+    border: .3px solid rgb(231, 177, 195);  
+    box-shadow: 0px 5px 15px rgba(241, 138, 202, 0.9);
+    background:rgba(236, 129, 172, 0.2)
+}
+.hding{
+    font-family: 'Fredoka One', cursive;
+    text-align: center;
+    font-weight: normal;
+    font-size: 40px;
+    color:  rgb(92, 45, 74);
+}
  
 
  
