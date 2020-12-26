@@ -9,6 +9,7 @@ class CheckOut(View):
     def post(self, request):
         address = request.POST.get('address')
         phone = request.POST.get('phone')
+        payment_method = request.POST.get('payment_method')
         customer = request.session.get('customer')
         cart = request.session.get('cart')
         products = Product.get_products_by_id(list(cart.keys()))

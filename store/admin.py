@@ -5,6 +5,7 @@ from .models.category import Category
 from .models.customer import Customer
 from .models.orders import Order
 from .models.slider import Slider
+from .models.admin import Admin
 
 class AdminProduct(admin.ModelAdmin):
     list_display = ['name', 'price', 'category','description']
@@ -20,3 +21,4 @@ admin.site.register(Category, AdminCategory)
 admin.site.register(Customer)
 admin.site.register(Order)
 admin.site.register(Slider)
+admin.site.register(Admin)
