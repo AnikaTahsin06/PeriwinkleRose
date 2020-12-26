@@ -8,17 +8,28 @@ from .models.slider import Slider
 from .models.admin import Admin
 
 class AdminProduct(admin.ModelAdmin):
-    list_display = ['name', 'price', 'category','description']
+    list_display = ['name', 'price', 'category','description','image']
 
 class AdminCategory(admin.ModelAdmin):
     list_display = ['name']
+
+class AdminSlider(admin.ModelAdmin):
+    list_display = ['sliderImage']
+
+class AdminCustomer(admin.ModelAdmin):
+    list_display = ['first_name', 'last_name', 'phone', 'email', 'password']
+
+class AdminOrder(admin.ModelAdmin):
+    list_display = ['product', 'customer', 'quantity', 'price', 'address','phone','date','status','payment_method','payment_completed']
+
+ 
 
 
 # Register your models here.
 admin.site.site_header = 'PeriwinkleRose'
 admin.site.register(Product, AdminProduct)
 admin.site.register(Category, AdminCategory)
-admin.site.register(Customer)
-admin.site.register(Order)
-admin.site.register(Slider)
+admin.site.register(Customer, AdminCustomer)
+admin.site.register(Order, AdminOrder)
+admin.site.register(Slider, AdminSlider)
 admin.site.register(Admin)

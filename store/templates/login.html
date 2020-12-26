@@ -5,13 +5,13 @@
 <div class="container">
     <div class="p-3 m-3">
         <div class="col-lg-5 mt-5 mb-5 mx-auto brc rounded pt-4">
-            <h3 class="alert alert-light border rounded">Login Here</h3>
+            <h3 class="alert alert-light border rounded" style="font-style:italic; text-align:center; color:rgb(119, 81, 108);">Login Here</h3>
             <form action="/login" method="POST">
 
                 {% csrf_token %}
 
                 {% if error %}
-                <div class="alert alert-danger" role="alert">
+                <div class="alert alert-danger" style=" color:rgba(240, 91, 86, 0.972)" role="alert">
                     {{error}}
                 </div>
                 {% endif %}
@@ -27,8 +27,8 @@
                 </div>
 
                 <!---SubmitButton----->
-                <div class="form-group">
-                    <input class="btn btn-sm btn-info col-lg-4" type="submit" value="Login">
+                <div class="form-group" style="text-align: center;">
+                    <input class="btn  btn-sm  btn-info" style="background-color: rgb(112, 55, 76); border-color: rgb(88, 42, 60);" type="submit" value="Login Here">
                 </div>
             </form>
         </div>
