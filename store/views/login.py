@@ -31,4 +31,5 @@ class Login(View):
 
 def logout(request):
     request.session.clear()
+    request.session['cart'] = {}
     return redirect('login')

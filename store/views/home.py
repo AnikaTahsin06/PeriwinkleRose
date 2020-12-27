@@ -49,13 +49,3 @@ class Index(View):
         #sld = Slider.get_all_sliders()
        # print(sld)
         #return render(request, 'index.html' , {'sliders':sld})
-
-
-
-
- 
-
- 
-         
-
- 
